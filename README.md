@@ -33,9 +33,11 @@
 ```bash
 # For Debian based Distros
 sudo apt-get install python-tk
+sudo apt-get install imagemagick
 
 # For RedHat Based Distro
 sudo dnf install python3-tkinter
+sudo dnf install imagemagick
 ```
 
 ---
