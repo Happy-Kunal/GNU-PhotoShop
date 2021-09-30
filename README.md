@@ -1,6 +1,6 @@
 <p align="center">
-    <a><img src="https://shields.io/badge/license-GPLv3-brightgreen" /></a>
-    <a><img src="https://img.shields.io/github/last-commit/Happy-Kunal/GNU-PhotoShop?logo=github" /></a>
+    <a><img src="https://shields.io/badge/license-GPLv3-brightgreen" href="LICENCE"/></a>
+    <a><img src="https://img.shields.io/github/last-commit/Happy-Kunal/GNU-PhotoShop?logo=github" href="#"/></a>
 </p>
 
 # GNU-PhotoShop
@@ -11,15 +11,9 @@
 
 ---
 
-## 🚀Some Screen Shots Of Results Of Using it
-<p align="center">
-<b>Coming Soon</b>
-</p>
-
----
-
 ## Table Of Content
 
+* [ScreenShots](#🚀some-screen-shots-of-results-of-using-it)
 * [Dependencies](#dependencies)
 * [Usage](#usage)
 * [Contributing](#contributing)
@@ -28,16 +22,72 @@
 * [Regards](#thanks-for-choosing)
 
 ---
+
+# 🚀Some Screen Shots Of Results Of Using it
+<div align="center">
+  <table>
+    <tr>
+      <th><div align="center"><h1>Method</h1></div></th>
+      <th><div align="center"><h1>Source Image</h1></div></th>
+      <th></th>
+      <th><div align="center"><h1>Output Image</h1></div></th>
+    </tr>
+    <!-- colorfilter -->
+    <!--  -->
+    <tr>
+      <td><b style="font-size:20px">edits.color_filter</b></td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/apple3.gif"/>
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/forReadme/Arrow.png"/>
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/Outputs/apple3_color_filter.png"/>
+        </div>
+      </td>
+    </tr>
+    <!-- grayscale -->
+    <!--  -->
+    <tr>
+      <td><b style="font-size:20px">edits.grayscale</b></td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/tiger.gif"/>
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/forReadme/Arrow.png"/>
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/Outputs/tiger_grey.gif"/>
+        </div>
+      </td>
+    </tr>
+    
+  </table>
+</div>
+
+---
+
 ## Dependencies
 
 ```bash
 # For Debian based Distros
 sudo apt-get install python-tk
-sudo apt-get install imagemagick
+sudo apt-get install imagemagick # If also using non GIF images
 
 # For RedHat Based Distro
 sudo dnf install python3-tkinter
-sudo dnf install imagemagick
+sudo dnf install imagemagick # If also using non GIF images
 ```
 
 ---
