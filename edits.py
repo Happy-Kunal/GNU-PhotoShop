@@ -55,15 +55,47 @@ def color_filter(imgName: str, color: tuple[int, int, int], threshold: int):
     return img
     
 
+def edge_detection(imgName: str, threshold: int) -> images.Image:
+    white = (255, 255, 255)
+    black = (0, 0, 0)
+    img = images.Image(imgName)
+
+    def brightness_diff(pixel1, pixel2):
+        r1, g1, b1 = pixel1
+        lum1 = 0.299 * r1 + 0.587 * g1 + 0.114 * b1
+        r2, g2, b2 = pixel2
+        lum2 = 0.299 * r2 + 0.587 * g2 + 0.114 * b2
+    
+        return abs(lum1 - lum2)
+
+    for x in range(1, img.getWidth()):
+        for y in range(img.getHeight() - 1):
+            current_pixel = img.getPixel(x, y)
+            left_pixel = img.getPixel(x - 1 , y)
+            bottom_pixel = img.getPixel(x, y + 1)
+
+            if brightness_diff(current_pixel, left_pixel) > threshold or\
+                    brightness_diff(current_pixel, bottom_pixel) > threshold:
+                        img.setPixel(x, y, black)
+            else:
+                img.setPixel(x, y, white)
+
+    return img
+
+
+
 if __name__ == "__main__":
-    imgName = "./imageFiles/apple3.gif"
-    #img2 = images.Image("./imageFiles/apple2.gif")
+    #imgName = "./imageFiles/apple3.gif"
+    img3 = "./imageFiles/tiger.gif"
 
-    img1 = color_filter(imgName, (199, 55, 47), 150)
-    img2 = grayscale(imgName)
+    #img1 = color_filter(imgName, (199, 55, 47), 150)
+    #img2 = grayscale(imgName)
+    img3 = edge_detection(imgName=img3, threshold=200)
 
-    img1.draw()
-    img2.draw()
+
+    #img1.draw()
+    #img2.draw()
+    img3.draw()
 
 
 
