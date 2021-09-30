@@ -56,14 +56,14 @@ def color_filter(imgName: str, color: tuple[int, int, int], threshold: int):
     
 
 if __name__ == "__main__":
-    img1Name = "./imageFiles/apple3.gif"
+    imgName = "./imageFiles/apple3.gif"
     #img2 = images.Image("./imageFiles/apple2.gif")
 
-    img1 = color_filter(img1Name, (199, 55, 47), 150)
-    #img2 = color_filter(img2, (199, 55, 47), 50)
+    img1 = color_filter(imgName, (199, 55, 47), 150)
+    img2 = grayscale(imgName)
 
     img1.draw()
-    #img2.draw()
+    img2.draw()
 
 
 
