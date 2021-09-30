@@ -1,5 +1,5 @@
 <p align="center">
-    <a><img src="https://shields.io/badge/license-GPLv3-brightgreen" href="LICENCE"/></a>
+    <a href="LICENCE"><img src="https://shields.io/badge/license-GPLv3-brightgreen"/></a>
     <a><img src="https://img.shields.io/github/last-commit/Happy-Kunal/GNU-PhotoShop?logo=github" href="#"/></a>
 </p>
 
@@ -52,8 +52,8 @@
         </div>
       </td>
     </tr>
-    <!-- grayscale -->
     <!--  -->
+    <!-- grayscale -->
     <tr>
       <td><b style="font-size:20px">edits.grayscale</b></td>
       <td>
@@ -69,6 +69,26 @@
       <td>
         <div align="center">
           <img src="imageFiles/Outputs/tiger_grey.gif"/>
+        </div>
+      </td>
+    </tr>
+    <!--  -->
+    <!-- edge_detection -->
+    <tr>
+      <td><b style="font-size:20px">edits.edge_detection</b></td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/tiger.gif"/>
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/forReadme/Arrow.png"/>
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/Outputs/tiger_edge_detection.png"/>
         </div>
       </td>
     </tr>
