@@ -32,7 +32,7 @@ class Color:
             r, g, b = (0 , chroma, x)
         elif hue >= 180 and hue < 240:
             r, g, b = (0, x, chroma)
-        elif h >= 240 and hue < 300:
+        elif hue >= 240 and hue < 300:
             r, g, b = (x, 0, chroma)
         else:
             r, g, b = (chroma, 0 , x)
