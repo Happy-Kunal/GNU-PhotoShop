@@ -1,5 +1,6 @@
 import images
 import functools
+import color
 
 def grayscale(imgName: str):
     img = images.Image(imgName)
@@ -86,10 +87,20 @@ def edge_detection(imgName: str, threshold: int) -> images.Image:
 def rotateHue(imgName : str, rotation : float):
     """
     Rotate the hue of an image with given radian
-    @param imgName = Name of the image
-    @param rotation = how much to rotate the image (in radians)
+    @param imgName : Name of the image
+    @param rotation : how much to rotate hue of the image (in degrees)
+    @return img : return the image after hue change
     """
-    pass
+    img = images.Image(imgName)
+    pixel = color.Color()
+    for x in range(1 , img.getWidth()):
+        for y in range(img.getHeight() - 1):
+            pixel.red, pixel.green , pixel.blue = img.getPixel(x , y)
+            hue, saturation, value = pixel.toHSV()
+            hue += rotation
+            pixel.fromHSV(hue, saturation, value)
+            img.setPixel(x, y, pixel.toRGB())
+    return img
 
 
 if __name__ == "__main__":
@@ -97,7 +108,7 @@ if __name__ == "__main__":
     # img3 = "./imageFiles/tiger.gif"
 
     #img1 = color_filter(imgName, (199, 55, 47), 150)
-    img2 = grayscale(imgName)
+    img2 = rotateHue(imgName, 60)
     # img3 = edge_detection(imgName=img3, threshold=200)
 
 
