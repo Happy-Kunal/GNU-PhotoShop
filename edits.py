@@ -84,7 +84,7 @@ def edge_detection(imgName: str, threshold: int) -> images.Image:
     return img
 
 
-def rotateHue(imgName : str, rotation : float):
+def rotate_hue(imgName : str, rotation : float):
     """
     Rotate the hue of an image with given radian
     @param imgName : Name of the image
@@ -108,7 +108,7 @@ if __name__ == "__main__":
     # img3 = "./imageFiles/tiger.gif"
 
     #img1 = color_filter(imgName, (199, 55, 47), 150)
-    img2 = rotateHue(imgName, 60)
+    img2 = rotate_hue(imgName, 60)
     # img3 = edge_detection(imgName=img3, threshold=200)
 
 

@@ -92,6 +92,26 @@
         </div>
       </td>
     </tr>
+    <!--  -->
+    <!-- rotate_hue -->
+    <tr>
+      <td><b style="font-size:20px">edits.rotate_hue</b></td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/apple3.jpg"/>
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/forReadme/Arrow.png"/>
+        </div>
+      </td>
+      <td>
+        <div align="center">
+          <img src="imageFiles/Outputs/apple3_rotate_hue.png"/>
+        </div>
+      </td>
+    </tr>
     
   </table>
 </div>
