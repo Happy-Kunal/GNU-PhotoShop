@@ -83,19 +83,27 @@ def edge_detection(imgName: str, threshold: int) -> images.Image:
     return img
 
 
+def rotateHue(imgName : str, rotation : float):
+    """
+    Rotate the hue of an image with given radian
+    @param imgName = Name of the image
+    @param rotation = how much to rotate the image (in radians)
+    """
+    pass
+
 
 if __name__ == "__main__":
-    #imgName = "./imageFiles/apple3.gif"
-    img3 = "./imageFiles/tiger.gif"
+    imgName = "./imageFiles/apple3.gif"
+    # img3 = "./imageFiles/tiger.gif"
 
     #img1 = color_filter(imgName, (199, 55, 47), 150)
-    #img2 = grayscale(imgName)
-    img3 = edge_detection(imgName=img3, threshold=200)
+    img2 = grayscale(imgName)
+    # img3 = edge_detection(imgName=img3, threshold=200)
 
 
     #img1.draw()
-    #img2.draw()
-    img3.draw()
+    img2.draw()
+    # img3.draw()
 
 
 
