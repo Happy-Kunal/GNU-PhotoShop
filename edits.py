@@ -87,14 +87,17 @@ def edge_detection(imgName: str, threshold: int) -> images.Image:
 def rotate_hue(imgName : str, rotation : float):
     """
     Rotate the hue of an image with given radian
-    @param imgName : Name of the image
-    @param rotation : how much to rotate hue of the image (in degrees)
-    @return img : return the image after hue change
+    @param imgName : str ( Name of the image )
+    @param rotation : float (how much to rotate hue of the image (in degrees) ) 
+    @return img : images.image (return the image after hue change)
     """
     img = images.Image(imgName)
     pixel = color.Color()
     for x in range(1 , img.getWidth()):
         for y in range(img.getHeight() - 1):
+            # here we are getting the pixel at (x,y) coordinate and converting 
+            # it into HSV value, then rotating the hue. Then converting HSV 
+            # value back to RGB and putting it in the image
             pixel.red, pixel.green , pixel.blue = img.getPixel(x , y)
             hue, saturation, value = pixel.toHSV()
             hue += rotation
@@ -102,19 +105,38 @@ def rotate_hue(imgName : str, rotation : float):
             img.setPixel(x, y, pixel.toRGB())
     return img
 
+def change_brightness(imgName : str, change : float):
+    """
+    change the brightness of the image with given change percentange
+    @param imgName : str ( Name of the image )
+    @param change : float ( percentange of brightness change )
+    @return image : images.image (return the image after brightness change)
+    """
+    pixel = color.Color()
+    img = images.Image(imgName)
+    for x in range(1, img.getWidth()):
+        for y in range(img.getHeight() - 1):
+            pixel.red , pixel.green , pixel.blue = img.getPixel(x , y)
+            pixel.red = int(min(255, pixel.red * change))
+            pixel.green = int(min(255, pixel.green * change))
+            pixel.blue = int(min(255, pixel.blue * change))
+            img.setPixel(x, y, pixel.toRGB())
+    return img
+
 
 if __name__ == "__main__":
-    imgName = "./imageFiles/apple3.gif"
+    img3 = "./imageFiles/apple3.gif"
     # img3 = "./imageFiles/tiger.gif"
 
     #img1 = color_filter(imgName, (199, 55, 47), 150)
-    img2 = rotate_hue(imgName, 60)
+    # img2 = rotate_hue(imgName, 60)
     # img3 = edge_detection(imgName=img3, threshold=200)
+    img3 = change_brightness(img3, 1.1)
 
 
     #img1.draw()
-    img2.draw()
-    # img3.draw()
+    # img2.draw()
+    img3.draw()
 
 
 
