@@ -34,12 +34,9 @@ def color_filter(imgName: str, color: tuple[int, int, int], threshold: int):
         deltaG = g1 - g
         deltaB = b1 - b
 
-        if absoluteDiff(deltaR, deltaB) < threshold and \
+        return absoluteDiff(deltaR, deltaB) < threshold and \
                 absoluteDiff(deltaB, deltaG) < threshold and \
-                absoluteDiff(deltaG, deltaR) < threshold:
-                    return True
-        else:
-            return False
+                absoluteDiff(deltaG, deltaR) < threshold
 
     def grayscale(color):
         r, g, b = color

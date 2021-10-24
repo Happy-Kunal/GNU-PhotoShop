@@ -54,9 +54,7 @@ class Color:
         cmin = min(r, g, b)
         delta = cmax - cmin
         value = cmax
-        saturation = 0
-        if cmax != 0 :
-            saturation = delta / cmax
+        saturation = delta / cmax if cmax != 0 else 0
         hue = 0
         if cmax == r:
             hue = 60 * ( ((g - b)/ delta )  % 6)
